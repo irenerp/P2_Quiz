@@ -41,6 +41,7 @@ exports.showCmd = (rl, id) => {
 	//compruebo que este el parametro id
 	if(typeof id === "undefined"){
 		errorlog(`Falta el parametro id`);
+		rl.prompt();
 	}else{
 		try{
 			//Intento acceder a la pregunta de id
@@ -72,6 +73,7 @@ exports.addCmd = rl => {
 exports.deleteCmd = (rl, id) => {
 	if(typeof id === "undefined"){
 		errorlog(`Falta el parametro id`);
+		rl.prompt();
 	}else{
 		try{
 			//Intento acceder a la pregunta de id
@@ -183,7 +185,7 @@ exports.playCmd = rl => {
 exports.creditsCmd = rl => {
 	log('Autores de la practica.');
     log('Irene Ramirez Panduro.', 'green');
-    log('Mónica Ramirez Panduro.', 'green');
+    log('Monica Ramirez Panduro.', 'green');
     rl.prompt();
 };
 
